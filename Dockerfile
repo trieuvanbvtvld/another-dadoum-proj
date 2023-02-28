@@ -10,7 +10,7 @@ WORKDIR /opt/
 COPY . .
 RUN mkdir build/
 WORKDIR /opt/build
-RUN cmake .. -DCMAKE_BUILD_TYPE=Release -Dbuild_sideloadipa=OFF -Dlink_libplist_dynamic=ON \
+RUN cmake .. -DCMAKE_BUILD_TYPE=Release -Dbuild_sideloadipa=ON -Dlink_libplist_dynamic=ON \
  && make anisette_server
 
 # Base for run
